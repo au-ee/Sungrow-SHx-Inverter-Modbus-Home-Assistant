@@ -1,8 +1,5 @@
 An *easy-to-use YAML-based integration* for several Sungrow inverters for Home Assistant. 
 
-
-# NOTE: HA 2024.4.1 to 2024.4.3 had some internal modbus bugs. These are fixed in 2024.4.4
-
 [![Discord Chat](https://img.shields.io/discord/1127341524770898062.svg)](https://discord.gg/ZvYBejFkm2)
 
 # Contents
@@ -17,14 +14,15 @@ An *easy-to-use YAML-based integration* for several Sungrow inverters for Home A
 - [4. Visual impressions](#4-visual-impressions)
 - [5. Tested configurations](#5-tested-configurations)
 - [6. Status and future work](#6-status-and-future-work)
-- [7. Most important of all](#7-most-important-of-all)
+- [7. Contributions](#7-contributions)
+- [8. Related work](#8-related-work)
 
 
 # 1. Overview
 
 This integration lets you gather sensor data and control the EMS (Energy Management System) of a wide range of Sungrow inverters, including, but not limited to: SH3.6RS, SH4.6RS, SH5.0RS, SH5.0RT, SH6.0RS, SH8.0RT, SH8.0RT-V112, SH6.0RT, SH10RT, SH10RT-V112, SH5K-20, SH3K6, SH4K6, SH5K-V13, SH5K-30. A battery is not required, but several sensors will not be available without one.
 
-Ensure, that you connected the inverter to the Home Assistant network using the **internal LAN** port. The WiNet Ethernet port and the WiNet WLAN are only partially working and we cannot fix this! (==> no support, sorry :/ )
+If avaliable, ensure, that you connected the inverter to the Home Assistant network using the **internal LAN** port. The WiNet Ethernet port and the WiNet WLAN are only partially working and we cannot fix this! (sungrow winet programming ==> no support, sorry :/ )
 
 ![Overview](doc/images/overview_modbus_connection.drawio.svg)
 
@@ -40,15 +38,17 @@ The documentation covers following topics:
 
 [Usage Instructions](https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/wiki/FAQ:-How-to-use)
 
-[FAQ, Troubleshooting, Known Issues](https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/wiki/FAQ:-Problems-with-the-connection)
+[Wiki: FAQ, Troubleshooting, Known Issues](https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/wiki/)
 
 ## 3. Support
+
+My personal time is quite limited, but there are several nice people here who like to help. 
 
 If you any kind of assistance, you have three options:
 
 a) Use the [github discussion](../../discussions) 
 
-b) (new! Created in July 2023) Join the Discord Channel [![Discord Chat](https://img.shields.io/discord/1127341524770898062.svg)](https://discord.gg/ZvYBejFkm2).
+b) Join the Discord Channel [![Discord Chat](https://img.shields.io/discord/1127341524770898062.svg)](https://discord.gg/ZvYBejFkm2).
 
 c) Only if code-related (bugs / contributions): Open an  [github issue](../../issue) or isse a pullrequest
 
@@ -94,7 +94,8 @@ Community-confirmed supported inverters (thank you for reporting!)
 - SH5K-30 (github, ajbatchelor)
 
 partially working
-- SH5.RS (home assistant community, Danirb80) via WiNetS: register running_state is not available. Created workarounds using template sensors
+- SH5.0RS (home assistant community, Danirb80) via WiNetS: register running_state is not available. Created workarounds using template sensors
+- SH6.0RS (github, icefest) largely working, occasionally needing to restart the winet
 
 ## 6. Status and future work 
 1. See [#38](https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/38) for some kind of a roadmap
@@ -102,9 +103,16 @@ partially working
 3. If you made a nice visualization - let us know! --> [github discussions](../../discussions)
 4. This is meant to be a simple, straightforward YAML-based integration. If you need more than this, I recommend having a look at the SunGather project: https://github.com/bohdan-s
 
-## 7. Contribution
+## 7. Contributions
 We are happy to share our experiences - feel encouraged to share yours with us, too! 
 
-If you have any questions, feature requests, found any bugs or have some hints how to update the documentation, a low-threshold way is to join the [![Discord Chat](https://img.shields.io/discord/1127341524770898062.svg)](https://discord.gg/ZvYBejFkm2) and just ask
+If you have any questions, feature requests, found any bugs or have some hints how to update the documentation, a low-threshold way is to join the [![Discord Chat](https://img.shields.io/discord/1127341524770898062.svg)](https://discord.gg/ZvYBejFkm2) and just ask.
 
 **Thanks to all the people, who are actively contributing to this project! Special thanks to @Louisbertelsmann, dylan09 and elektrinis for their efforts**
+
+
+## 8. Related work
+- Integrate a **Sungrow Wallbox**? Check https://github.com/Louisbertelsmann/Sungrow-Wallbox-Modbus-HomeAssistant
+- Integrate your inverter to **EVCC**? Check https://github.com/Hoellenwesen/home-assistant-configurations
+
+
