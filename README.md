@@ -1,3 +1,10 @@
+# This repo is deprecated. 
+
+In the meantime, the upstream repo has added experimental support for a second inverter which works the same like this one but has the advantage of being auto-generates (as far as I understood). So, please head over to mkaiser's repo:
+
+https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/
+
+
 An *easy-to-use YAML-based integration* for several Sungrow inverters for Home Assistant. 
 
 [![Discord Chat](https://img.shields.io/discord/1127341524770898062.svg)](https://discord.gg/ZvYBejFkm2)
