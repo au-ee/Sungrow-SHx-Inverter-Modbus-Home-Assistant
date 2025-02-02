@@ -1,6 +1,6 @@
 # This repo is deprecated. 
 
-In the meantime, the upstream repo has added experimental support for a second inverter which works the same like this one but has the advantage of being auto-generates (as far as I understood). So, please head over to mkaiser's repo:
+In the meantime, the upstream repo has added experimental support for a second inverter which works the same like this one but has the advantage of being auto-generated (as far as I understood). So, please head over to mkaiser's repo:
 
 https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/
 
